@@ -1,0 +1,268 @@
+package com.java24hours;
+
+class Commodity {
+    public static void main(String[] args) {
+        int score = 0;
+        int answer =13;
+        int correctAnswer =13;
+        if (answer == correctAnswer) {
+            score += 10;
+            System.out.println("Всё верно. Вы получили 10 очков");
+        } else {
+            score -=5;
+        System.out.println("Вы ответили, неправильно. Вы потеряли 5 очков");
+        }
+        System.out.println("Ваш счёт составляет " +score +" очков");
+    }
+}
+run:
+Всё верно. Вы получили 10 очков
+Ваш счёт составляет 10 очков
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+class Commodity {
+    public static void main(String[] args) {
+        int score = 0;
+        int answer =15;
+        int correctAnswer =13;
+        if (answer == correctAnswer) {
+            score += 10;
+            System.out.println("Всё верно. Вы получили 10 очков");
+        } else {
+            score -=5;
+        System.out.println("Вы ответили, неправильно. Вы потеряли 5 очков");
+        }
+        System.out.println("Ваш счёт составляет " +score +" очков");
+    }
+}
+run:
+Вы ответили, неправильно. Вы потеряли 5 очков
+Ваш счёт составляет -5 очков
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+class Commodity {
+
+    public static void main(String[] args) {
+        int point = 8;
+
+        if (point == 10) {
+            System.out.println("Вы получили 10 баллов. Вы гений!");
+        } else if (point == 9) {
+            System.out.println("Вы получили 9 баллов. Вы крутой!");
+        } else if (point == 8) {
+            System.out.println("Вы получили 8 баллов. Вы молодец!");
+        } else if (point == 7) {
+            System.out.println("Вы получили 7 баллов. Вы хорошо справились!");
+        } else if (point == 6) {
+            System.out.println("Вы получили 6 баллов. Вы неплохо справились!");
+        } else if (point == 5) {
+            System.out.println("Вы получили 5 баллов. Вы знаете основы!");
+        } else if (point == 4) {
+            System.out.println("Вы получили 4 баллов. Вы что-то знаете!");
+        } else if (point == 3) {
+            System.out.println("Вы получили 3 баллов. Вы почти ни чего не знаете!");
+        } else if (point == 2) {
+            System.out.println("Вы получили 2 баллов. Вы ни чего не знаете!");
+        } else if (point == 1) {
+            System.out.println("Вы получили 1 балл. Вы не отличаете А от Б!");
+        } else if (point == 0) {
+            System.out.println("Вы получили 0 баллов. Это не реально! Вы нечто!");
+        }
+            System.out.println("Ваш результат: " + point);
+        }
+}
+run:
+Вы получили 8 баллов. Вы молодец!
+Ваш результат: 8
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+class Commodity {
+
+    public static void main(String[] args) {
+        int point = 21;
+
+        switch (point) {
+            case 10:
+                System.out.println("Вы получили 10 баллов. Вы гений!");
+                break;
+            case 9:
+                System.out.println("Вы получили 9 баллов. Вы крутой!");
+                break;
+            case 8:
+                System.out.println("Вы получили 8 баллов. Вы молодец!");
+                break;
+            case 7:
+                System.out.println("Вы получили 7 баллов. Вы хорошо справились!");
+                break;
+            case 6:
+                System.out.println("Вы получили 6 баллов. Вы неплохо справились!");
+                break;
+            case 5:
+                System.out.println("Вы получили 5 баллов. Вы знаете основы!");
+                break;
+            case 4:
+                System.out.println("Вы получили 4 баллов. Вы что-то знаете!");
+                break;
+            case 3:
+                System.out.println("Вы получили 3 баллов. Вы почти ни чего не знаете!");
+                break;
+            case 2:
+                System.out.println("Вы получили 2 баллов. Вы ни чего не знаете!");
+                break;
+            case 1:
+                System.out.println("Вы получили 1 балл. Вы не отличаете А от Б!");
+                break;
+            case 0:
+                System.out.println("Вы получили 0 баллов. Это не реально! Вы нечто!");
+                break;
+            default:
+                System.out.println("Проверьте ваш результат! Он не соответствует шкале от 0 до 10.");
+        }
+        System.out.println("Ваш результат: " + point);
+    }
+}
+run:
+Проверьте ваш результат! Он не соответствует шкале от 0 до 10.
+Ваш результат: 21
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+class Commodity {
+
+    public static void main(String[] args) {
+        String command = "ПОКУПКА";
+        int balance = 650;
+        int quantity =42;
+        
+        switch (command){
+            case "ПОКУПКА":
+        quantity +=5;
+        balance -=20;
+        break;
+            case "ПРОДАЖА":
+        quantity -=5;
+        balance +=15;
+        }
+        System.out.println("Баланс: $" +balance + "\n" +"Количество: " +quantity);
+    }
+}
+run:
+Баланс: $630
+Количество: 47
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+class Commodity {
+
+    public static void main(String[] args) {
+        int lucky = 3;
+        int skillUp = (lucky > 5)?20:10;
+        System.out.println(skillUp);
+    }
+}
+run:
+10
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+class Commodity {
+
+    public static void main(String[] args) {
+        String gender = "женщина";
+        System.out.println((gender.equals("женщина")) ? "Госпожа":"Господин");
+    }
+}
+run:
+Госпожа
+++++++++++++++++++++++++++++++++++
+package com.java24hours;
+
+import java.time.*;
+import java.time.temporal.*;
+
+class Commodity {
+
+    public static void main(String[] args) {
+        //Определить текущее время и дату
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.get(ChronoField.HOUR_OF_DAY);
+        int minute = now.get(ChronoField.MINUTE_OF_HOUR);
+        int month = now.get(ChronoField.MONTH_OF_YEAR);
+        int day = now.get(ChronoField.DAY_OF_MONTH);
+        int year = now.get(ChronoField.YEAR);
+
+        //Вывести приветствие
+        if (hour < 12) {
+            System.out.println("Доброе утро!\n");
+        } else if (hour < 17) {
+            System.out.println("Добрый день!\n");
+        } else {
+            System.out.println("Добрый вечер!\n");
+        }
+        //Начало формирования строки отображения времени
+        System.out.print("Сейчас ");
+
+        //Сколько часовъ
+        System.out.print(hour);
+        System.out.print((hour != 1 & hour != 21)
+                ? " часа (часов) " : " час ");
+        //Сколько минут
+        if (minute != 0) {
+            System.out.print(minute);
+            System.out.print((minute != 1 & minute != 21 & minute != 31 & minute != 41 & minute != 51)
+                    ? " минуты (минут)" : " минута");
+        }
+        //Отображения числа месяца
+        System.out.print("\n" + day + " ");
+
+        //Название месяца
+        switch (month) {
+                case 1:
+                System.out.print("Январь");
+                break;
+            case 2:
+                System.out.print("Февраль");
+                break;
+            case 3:
+                System.out.print("Март");
+                break;
+            case 4:
+                System.out.print("Апрель");
+                break;
+            case 5:
+                System.out.print("Май");
+                break;
+            case 6:
+                System.out.print("Июнь");
+                break;
+            case 7:
+                System.out.print("Июль");
+                break;
+            case 8:
+                System.out.print("Август");
+                break;
+            case 9:
+                System.out.print("Сентябрь");
+                break;
+            case 10:
+                System.out.print("Октябрь");
+                break;
+            case 11:
+                System.out.print("Ноябрь");
+                break;
+            case 12:
+                System.out.print("Декабрь");
+        }
+        //Отображение года
+        System.out.println(", " + year);
+    }
+}
+run:
+Добрый вечер!
+
+Сейчас 21 час 53 минуты (минут)
+23 Ноябрь, 2020
+++++++++++++++++++++++++++++++++++
