@@ -1,0 +1,11 @@
+package com.java24hours;
+
+class Commodity {
+    public static void main(String[] args) {
+        long account = -17_000_000_000L;
+        if(account<0){
+        System.out.println("Превышен кредит по счёту. У вас на счету: " +account);
+        } else {
+        System.out.println("На вашем счету " +account);}
+    }
+}
