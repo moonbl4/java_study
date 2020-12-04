@@ -266,3 +266,80 @@ run:
 Сейчас 21 час 53 минуты (минут)
 23 Ноябрь, 2020
 ++++++++++++++++++++++++++++++++++
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+
+        int bonus = 0;
+        int discount = 10;
+        int purchaseItem = 5;
+        final int DISCOUNT_LIMIT = 3;
+        if ( purchaseItem > DISCOUNT_LIMIT ) {
+            bonus = discount;
+        }
+        System.out.println(bonus);
+    }
+}
+------------------------------------
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+
+        int bonus;
+        int discount = 10;
+        int purchaseItem = 5;
+        final int DISCOUNT_LIMIT = 3;
+        if ( purchaseItem > DISCOUNT_LIMIT ) {
+            bonus = discount;
+        } else {
+            bonus = 0;
+        }
+        System.out.println(bonus);
+    }
+}
+----------------------------------------
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+
+        int bonus;
+        int discount = 10;
+        int purchaseItem = 5;
+        final int DISCOUNT_LIMIT = 3;
+        bonus = purchaseItem > DISCOUNT_LIMIT ? discount : 0;
+//        if ( purchaseItem > DISCOUNT_LIMIT ) {
+//            bonus = discount;
+//        } else {
+//            bonus = 0;
+//        }
+        System.out.println(bonus);
+    }
+}
+run:
+10
++++++++++++++++++++++++++++++++++++++++++++++
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+                MedicalStaff medic = new HeadDoctor ();
+                if (medic instanceof Nurse) {
+                    System.out.println ("Nurse");
+                } else if (medic instanceof Doctor) {
+                    System.out.println ("Doctor");
+                } else if (medic instanceof HeadDoctor) {
+                    System.out.println ("HeadDoctor");
+                }
+            }
+        }
+        class MedicalStaff {}
+        class Doctor extends MedicalStaff {}
+        class Nurse extends MedicalStaff {}
+        class HeadDoctor extends Doctor {}
+
+run:
+Doctor
+++++++++++++++++++++++++++++++++++++++++++++++
