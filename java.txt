@@ -1,3 +1,264 @@
+
+(ВЕС ЧЕЛОВЕКА НА ДРУГИХ ПЛАНЕТАХ)
+
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	System.out.print("Ваш вес на Земле будет ");
+	double weight =98.6;
+	System.out.println(weight);
+
+	System.out.println("Ваш вес на планете Меркурий будет");
+	double mercury=weight*.378;
+	System.out.println(mercury);
+
+		System.out.println("Ваш вес на Луне будет ");
+		double moon=weight*.166;
+		System.out.println(moon);
+
+		System.out.println("Ваш вес на планете Юпитер будет ");
+		double jupiter=weight*2.364;
+		System.out.println(jupiter);
+
+		System.out.println("Ваш вес на планете Венера будет ");
+		double venera=weight/100*90.7;
+		System.out.println(venera);
+
+		System.out.println("Ваш вес на планете Уран будет ");
+		double uran=weight/100*88.9;
+		System.out.println(uran);
+    }
+}
+Ваш вес на Земле будет 98.6
+Ваш вес на планете Меркурий будет
+37.2708
+Ваш вес на Луне будет 
+16.3676
+Ваш вес на планете Юпитер будет 
+233.0904
+Ваш вес на планете Венера будет 
+89.4302
+Ваш вес на планете Уран будет 
+87.6554
+=============================================================================
+
+(СЛУЧАЙНОЕ ЧИСЛО)
+
+package com.company;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Random generator = new Random();
+    int value = generator.nextInt();
+    System.out.println("Случавйное число "
+    + value);
+    }
+}
+Случавйное число -1380657749
+=============================================================================
+
+(КВАДРАТНЫЙ КОРЕНЬ)
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        int numЬer = 225;
+        System.out.println( " Квадратный корень из "
+        + numЬer
+        + " равен "
+        + Math.sqrt ( numЬer) );
+    }
+}
+ Квадратный корень из 225 равен 15.0
+=============================================================================
+
+(РЕШЕНИЕ ПРИМЕРА)
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        int x = 5;
+        int number= ++x * 6 + 4 * 10 / 2; //++x = x+1
+        System.out.println(number);
+    }
+}
+56
+/*Ниже описан порядок выподнения математических операций в выражениях
+1. Инкремент и декремент.
+2. Умножение, дедение и дедение с остатком.
+3. Сложение и вычитание.
+4. Операции сравнения.
+5. Присnаивание значения переменной с помощью знака равенства.*/
+=============================================================================
+
+(СПЕЦ СИМВОЛЫ)
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Энтoни Ферранте - режиссер фильма \"Акулий торнадо\".");
+        System.out.println("\"\'Aкyлий торнадо\' - это полтора часа вашей"
+                + "жизни, которые никогда не вернутся. \nИ вы не захотите, чтобы"
+                + " они вернулись.\"\n"
+                + "\t-- \\Дэвид Хинкли, New York Daily News\\");
+    }
+}
+Энтoни Ферранте - режиссер фильма "Акулий торнадо".
+"'Aкyлий торнадо' - это полтора часа вашейжизни, которые никогда не вернутся. 
+И вы не захотите, чтобы они вернулись."
+	-- \Дэвид Хинкли, New York Daily News\
+/*Специальный 		Что
+	символ 		 отображается
+
+		\' 		Одинарная ковычка
+		\"		Двойная ковычка
+		\\		Обратная косая черта
+		\t		Табуляция
+		\b		Происходит возврат на одну позицию
+		\r		Происходит возврат в начало строки
+		\f		Выполняется прогон страницы
+		\n		Новая строка*/
+
+=============================================================================
+
+(ПРИСВОЕНИЕ К ПЕРЕМЕННОЙ ДРУГИХ СТРОК)
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        String searchKeywords = "";
+        searchKeywords = searchKeywords + " акула ";
+        searchKeywords = searchKeywords + " ураган ";
+        searchKeywords = searchKeywords + " опасность ";
+        System.out.println(searchKeywords);
+    }
+}
+ акула  ураган  опасность 
+=============================================================================
+
+(СРАВНЕНИЕ ДВУХ СТРОК)
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String favorite = " бензопила ";
+        String guess = " кий для пула ";
+        System . out . println ( "Любимoe оружие Фина " + guess + "?" );
+        System . out . println ( "Oтвeт : "+ favorite . equals ( guess ));
+    }
+}
+Любимoe оружие Фина  кий для пула ?
+Oтвeт : false
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String favorite = " бензопила ";
+        String guess = " кий для пула ";
+        System . out . println ( "Любимoe оружие Фина " + favorite + "?" );
+        System . out . println ( "Oтвeт : "+ favorite . equals ( favorite ));
+    }
+}
+Любимoe оружие Фина  бензопила ?
+Oтвeт : true
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String favorite = " бензопила ";
+        String guess = " БЕНзопиЛа ";
+        System . out . println ( "Любимoe оружие Фина " + guess + "?" );
+        System . out . println ( "Oтвeт : "+ favorite . equalsIgnoreCase ( guess ));
+    }
+}
+Любимoe оружие Фина  БЕНзопиЛа ?
+Oтвeт : true
+=============================================================================
+
+(ИЗМЕНЕНИЕ РЕГИСТРА)
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String fin = "Йен Зиринг";
+        String change = fin.toUpperCase();
+        System.out.println(change);
+    }
+}
+ЙЕН ЗИРИНГ
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String fin = "Йен Зиринг";
+        String change = fin.toLowerCase();
+        System.out.println(change);
+    }
+}
+йен зиринг
+=============================================================================
+
+(ТИТРЫ И ВСЕ ИМЕНА АКТЁРОВ ПРОПИСНЫМИ БУКВАМИ)
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Информация о фильме
+        String title = "Акулий торнадо ";
+        int year = 2013;
+        String director = "Энтони Ферранте ";
+        String director1 = director.toUpperCase();
+        String role1 = "Фин ";
+        String actor1 = "Йен Зиринг ";
+        String actor11 = actor1.toUpperCase();
+        String role2 = "Эйприл ";
+        String actor2 = "Тара Рид";
+        String actor22 = actor2.toUpperCase();
+        String role3 = "Джордж";
+        String actor3 = "Джон Херд";
+        String actor33 = actor3.toUpperCase();
+        String role4 = "Нова ";
+        String actor4 = "Эсси Серб о ";
+        String actor44 = actor4.toUpperCase();
+        // отображение информации
+        System.out.println(title + " (" + year + " ) \n" +
+                " Режиссер" + "\t" + director1 + " \n" +
+                role1 + "\t" + actor11 + " \n" +
+                role2 + "\t" + actor22 + " \n" +
+                role3 + "\t" + actor33 + " \n" +
+                role4 + "\t" + actor44);
+
+    }
+}
+Акулий торнадо  (2013 ) 
+ Режиссер	ЭНТОНИ ФЕРРАНТЕ  
+Фин 	ЙЕН ЗИРИНГ  
+Эйприл 	ТАРА РИД 
+Джордж	ДЖОН ХЕРД 
+Нова 	ЭССИ СЕРБ О 
+=============================================================================
+(НАЧИСЛЕНИЕ БАЛОВ ЗА ОТВЕТЫ)
 package com.java24hours;
 
 class Commodity {
@@ -18,7 +279,8 @@ class Commodity {
 run:
 Всё верно. Вы получили 10 очков
 Ваш счёт составляет 10 очков
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(НАЧИСЛЕНИЕ БАЛОВ ЗА ОТВЕТЫ)
 package com.java24hours;
 
 class Commodity {
@@ -39,7 +301,8 @@ class Commodity {
 run:
 Вы ответили, неправильно. Вы потеряли 5 очков
 Ваш счёт составляет -5 очков
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(ОПИСАНИЕ ВВЕДЁНЫХ БАЛОВ)
 package com.java24hours;
 
 class Commodity {
@@ -76,7 +339,8 @@ class Commodity {
 run:
 Вы получили 8 баллов. Вы молодец!
 Ваш результат: 8
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(ОПИСАНИЕ ВВЕДЁНЫХ БАЛОВ - НЕ ВЕРНОЕ ЗНАЧЕНИЕ)
 package com.java24hours;
 
 class Commodity {
@@ -127,7 +391,8 @@ class Commodity {
 run:
 Проверьте ваш результат! Он не соответствует шкале от 0 до 10.
 Ваш результат: 21
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(СПИСАНИЕ И ПОПОЛНЕНИЕ БАЛАНСА)
 package com.java24hours;
 
 class Commodity {
@@ -152,7 +417,8 @@ class Commodity {
 run:
 Баланс: $630
 Количество: 47
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(ПОВЫШЕНИЕ ЗНАЧЕНИЯ ПРИ УКАЗАНОМ ЗНАЧЕНИ)
 package com.java24hours;
 
 class Commodity {
@@ -165,7 +431,8 @@ class Commodity {
 }
 run:
 10
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(ОПРЕДЕЛДЕНИЕ ПОЛА)
 package com.java24hours;
 
 class Commodity {
@@ -177,7 +444,8 @@ class Commodity {
 }
 run:
 Госпожа
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(ЧАСЫ И ДАТА)
 package com.java24hours;
 
 import java.time.*;
@@ -265,7 +533,8 @@ run:
 
 Сейчас 21 час 53 минуты (минут)
 23 Ноябрь, 2020
-++++++++++++++++++++++++++++++++++
+=============================================================================
+(ДИСКОНТ ПРИ ВЫПОЛНЕНИИ УСЛОВИЯ)
 package main;
 
 public class LearnMain {
@@ -281,7 +550,10 @@ public class LearnMain {
         System.out.println(bonus);
     }
 }
-------------------------------------
+run:
+10
+=============================================================================
+(ДИСКОНТ ПРИ ВЫПОЛНЕНИИ УСЛОВИЯ)
 package main;
 
 public class LearnMain {
@@ -299,7 +571,10 @@ public class LearnMain {
         System.out.println(bonus);
     }
 }
-----------------------------------------
+run:
+10
+=============================================================================
+(ДИСКОНТ ПРИ ВЫПОЛНЕНИИ УСЛОВИЯ)
 package main;
 
 public class LearnMain {
@@ -320,7 +595,8 @@ public class LearnMain {
 }
 run:
 10
-+++++++++++++++++++++++++++++++++++++++++++++
+=============================================================================
+(КТО ИЗ ВЕТКИ ПОДХОДИТ)
 package main;
 
 public class LearnMain {
@@ -342,4 +618,110 @@ public class LearnMain {
 
 run:
 Doctor
-++++++++++++++++++++++++++++++++++++++++++++++
+=============================================================================
+(СУММА ПЕРВЫХ 100 НАТУРАЛЬНЫХ ЧИСЕЛ)
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+
+
+        int sum = 0;
+        for(int i = 1; i <= 100; ){
+            sum += i++;
+        }
+        System.out.println(sum);
+    }
+}
+
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+
+        int i = 1;
+        int sum = 0;
+        for(; i <= 100; i++){
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+
+        for(int i = 1, sum = 0; i <= 100; sum += i++);
+    }
+}
+=============================================================================
+(While - выполнение действия пока выполняется условие)
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+        int value = 42;
+        while (value < 50) {
+            value++;
+            System.out.println(value);
+        }
+    }
+}
+run:
+43
+44
+45
+46
+47
+48
+49
+50
+=============================================================================
+(While - выполнение действия пока выполняется условие + if)
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+        int value = 42;
+        while (value < 50) {
+            value++;
+			if(value > 44 && value <48) {
+				continue;
+			}
+            System.out.println(value);
+        }
+    }
+}
+run:
+43
+44
+48
+49
+50
+=============================================================================
+(While - выполнение действия пока выполняется условие + if)
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
+        int value = 42;
+        while (value < 50) {
+            value++;
+			if(value > 44 && value <48) {
+				break;
+			}
+            System.out.println(value);
+        }
+    }
+}
+run:
+43
+44
+=============================================================================
+(МАСИВ)
+package main;
+
+public class LearnMain {
+    public static void main(String[] args) {
