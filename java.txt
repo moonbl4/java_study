@@ -1,4 +1,91 @@
+(калькулятор сумма и произведение)
+package main;
 
+import java.util.*;
+
+public class Example {
+
+    public static void main(String[] args) {
+        Scanner vvod = new Scanner(System.in);
+        for (int i = 0; true; i++) {
+                int x = vvod.nextInt();
+                int y = vvod.nextInt();
+
+                System.out.println("Sum = " + (x + y));
+                System.out.println("Mult = " + (x * y));
+            }
+        }
+    }
+run:
+4
+54
+Sum = 58
+Mult = 216
+=============================================================================
+(Отобразить в окне консоли аргументы командной строки в обратном порядке)
+package main;
+
+import java.util.Scanner;
+
+public class Example {
+
+    public static void main(String[] args) {
+
+        Scanner vvod = new Scanner(System.in);
+        for (int i = 0; true; i++) {
+            StringBuffer toll = new StringBuffer(vvod.nextLine());
+            toll.reverse();
+            System.out.println("Hello " + toll.toString()); //relbmessa
+        }
+    }
+}
+run:
+1234567890
+Hello 0987654321
+
+
+//Stringbuffer похоже переводит вводимые данные в буфер строк, далее обрабатывает и выводит по принципу reverse
+        
+=============================================================================
+(ПРИВЕТСВИЕ ПОЛЬЗОВАТЕЛЯ ПРИ ВВОДЕ ЕГО ИМЕНИ)
+
+package main;
+
+import java.util.Scanner;
+
+public class Example {
+
+    public static void main(String[] args) {
+        System.out.println("What's your name");
+        Scanner in = new Scanner(System.in);
+        String name = in.next();
+        System.out.println("Hello, " +name+ "!");
+    }
+}
+run:
+What's your name
+Aleksandr
+Hello, Aleksandr!
+=============================================================================
+(ПРИВЕТСВИЕ)
+package main;
+
+import java.util.Scanner;
+
+public class Example {
+
+    public static void main(String[] args) {
+
+      Scanner vvod = new Scanner(System.in);
+      for (int i = 0; true; i++) {
+        System.out.println("Hello " + vvod.nextLine());
+        }
+    }
+}
+run:
+das
+Hello das
+=============================================================================
 (ВЕС ЧЕЛОВЕКА НА ДРУГИХ ПЛАНЕТАХ)
 
 
@@ -60,6 +147,50 @@ public class Main {
     }
 }
 Случавйное число -1380657749
+=============================================================================
+(10 случайных чисел с новой строки)
+package main;
+
+import java.util.*;
+
+public class Example {
+
+    public static void main(String[] args) {
+        Random generator = new Random();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(generator.nextInt());
+        }
+    }
+}
+run:
+1493822129
+-715088562
+680203761
+-95859272
+-972365333
+-470250750
+1190193691
+-1263190888
+-1804044958
+771656289
+=============================================================================
+(10 случайных чисел в строку)
+package main;
+
+import java.util.*;
+
+public class Example {
+
+    public static void main(String[] args) {
+        Random generator = new Random();
+        for (int i = 0; i < 10; i++) {
+            System.out.print(generator.nextInt()+" ");
+        }
+    }
+}
+run:
+798467926 1907333664 -1240498695 1657814317 1650930350 1071444928 1363175260 824992222 -445677723 -1253626043 СБОРКА УСПЕШНО ЗАВЕРШЕНА (общее время: 0 секунд)
+
 =============================================================================
 
 (КВАДРАТНЫЙ КОРЕНЬ)
@@ -721,7 +852,78 @@ run:
 44
 =============================================================================
 (МАСИВ)
+public class NewClass {
+    public static void main(String[] args) {
+    	int[] name = new int[] {23,34,56};
+        System.out.print(name[1]);
+    }
+}
+run:
+34
+//char[] stroka; // Создание пустого массива
+int numbers[]; // Не будет считаться ошибкой
+
+int[] nums = new int[4];
+nums[0] = 1; // Добавление элементов в массив из 4 элементов
+
+int[] nums2 = new int[] { 1, 2, 3, 5 }; // Присвоение всех значений сразу
+Для массивов существует несколько дополнительных методов, что позволяют проводить действия над массивом. Рассмотрим несколько из них: 
+
+length - возвращает количество элементов в массиве. К примеру, создадим массив arr и укажем для него 3 элемента. При вызове функции будет выдано число 3: arr.length;
+
+Arrays.copyOf - копирует один массив в другой. 
+Пример:
+int[] arr = new int[] { 1, 2, 3, 5 };
+int[] some_new = Arrays.copyOf(arr, arr.length);
+
+Arrays.sort - сортировка массива.
+Пример:
+int[] numbers = new int[] { 1, 7, 3, 5, 2, 6, 4 };
+ 
+Arrays.sort(numbers);//
+=============================================================================
+(МАКСИМАЛЬНЫЙ ЭЛЕМЕНТ МАССИВА)
+
+public class NewClass {
+    public static void main(String[] args) {
+int[] a = new int[] {-14, 23, 9, -4, 12, -1};
+int max = 0; 
+for (int i = 0; i < a.length; i++) { 
+	if (a[i] > max) 
+		max = a[i];
+} 
+System.out.println("Максимальный элемент: " + max);
+    }
+}
+run:
+Максимальный элемент: 23
+=============================================================================
+(ВВОД ДАННЫХ МАССИВА)
 package main;
 
-public class LearnMain {
+import java.util.Scanner;
+
+public class NewClass {
+
     public static void main(String[] args) {
+        int[] a;
+        int n;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter numbers of array: ");
+        n = in.nextInt();
+        a = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter a[" + i + "] =");
+            a[i] = in.nextInt();
+        }
+    }
+}
+run:
+Enter numbers of array: 3
+Enter a[0] =
+1
+Enter a[1] =
+2
+Enter a[2] =
+3
+=============================================================================
