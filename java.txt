@@ -1002,6 +1002,38 @@ for (int i = 9; i >= 0; i--)
 System.out.println(array[i]);
 }
 =============================================================================
+//массив Reverse
+//Считывает с консоли число N (в тестах оно всегда будет положительным).
+//Потом считывает N чисел с консоли.
+//Если N чётное — вывести введенные числа в обратном порядке, иначе — вывести в том же порядке.
+//Каждое число выводить с новой строки.
+package main;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Example {
+
+    public static void main(String[] args) {
+        int n;
+        Scanner in = new Scanner(System.in);
+        n = in.nextInt();
+        if (n<0) 
+            return;
+        int[] array = new int[n];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = in.nextInt();
+        }
+        if (n % 2 == 0) {
+        for (int i = n-1; i >= 0; i--) 
+            System.out.println(array[i]);
+            }
+        else {
+            for (int i = 0; i < n; i++)
+        System.out.println(array[i]);}
+        }
+    }
+=============================================================================
 // Поиск минимального элемента в массиве
 Scanner console = new Scanner(System.in);
 int[] array = new int[10];
