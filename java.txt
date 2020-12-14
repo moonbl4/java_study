@@ -1041,7 +1041,7 @@ public class Solution {
         }
     }
 =============================================================================
-////массив Максмальное из N чисел
+//массив Максмальное из N чисел
 package com.javarush.task.pro.task05.task0507;
 
 import java.util.Scanner;
@@ -1247,7 +1247,6 @@ String s2 = text.toUpperCase();
 System.out.println(text == message);	true  // адреса равны
 System.out.println(text == s1);  	false // адреса разные
 System.out.println(s1 == s2);		false // адреса разные
-                   
 =============================================================================
 // Программа считывает с клавиатуры числа до тех пор, пока вводят именно числа.
 Scanner console = new Scanner(System.in);
@@ -1345,12 +1344,85 @@ for (int i = 0; i < 20; i++)
    System.out.println(i);
 }
 =============================================================================
+// for Print from 0 to 9
+package Lesson5;
+
+public class ForCreate {
+    public static void main(String[] args) {
+        int i;
+        for(i=0; i<10; i++)
+            System.out.println("String # " + i);
+    }
+}
+run:
+String # 0
+String # 1
+String # 2
+String # 3
+String # 4
+String # 5
+String # 6
+String # 7
+String # 8
+String # 9
+=============================================================================
+// for Print from 10 to 1
+package Lesson5;
+
+public class ForCreate {
+    public static void main(String[] args) {
+        int i;
+        for(i=10; i>0; i--)
+            System.out.println("String # " + i);
+    }
+}
+run:
+String # 10
+String # 9
+String # 8
+String # 7
+String # 6
+String # 5
+String # 4
+String # 3
+String # 2
+String # 1
+=============================================================================
 // for выводит числа от 1 до 20 и пропускает числа кратные 7
 for (int i = 1; i <= 20; i++)
 {
    if ( (i % 7) == 0) continue;
    System.out.println(i);
 }
+=============================================================================
+// for измение двух значений до сробатывания условия
+package Lesson5;
+
+public class ForMore {
+    public static void main(String[] args) {
+        int a,b;
+        for(a=0,b=5;a<b;a++,b--)
+            System.out.println(a+" "+b);
+    }
+}
+run:
+0 5
+1 4
+2 3
+=============================================================================
+// for 10 value from 'h'
+package Lesson5;
+
+public class ForPrintChar {
+    public static void main(String[] args) {
+        int i;
+        char c = 'h';
+        for(i = 0, c = 'h'; i<10; i++, c++)
+            System.out.print(c+" ");
+    }
+}
+run: 
+h i j k l m n o p q 
 =============================================================================
 // for считает строки количество введёных числовых значений
 Scanner console = new Scanner(System.in);
@@ -1378,24 +1450,202 @@ for (int i = 0; i < 10; i++)
    System.out.println();
 }
 =============================================================================
-//do-while 
-String s;
-do
-{
-   s = console.nextLine();
+// while-if
+package Lesson5;
+
+public class WhileBreak {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i < 100) {
+            if (i == 10) {
+                break;
+            }
+            System.out.println("i = " + i);
+            i++;
+        }
+        System.out.println("Finish");
+    }
 }
-while (!s.equals("exit"))
+run:
+i = 0
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+i = 6
+i = 7
+i = 8
+i = 9
+Finish
+=============================================================================
+//do-while 
+package Lesson5;
+
+import java.util.Scanner;
+
+public class DoWhile {
+    public static void main(String[] args) {
+        String s;
+        Scanner console = new Scanner(System.in);
+        do {
+            s = console.nextLine();
+        }
+        while (!s.equals("exit"));
+
+    }
+}
+=============================================================================
+// do while n=10
+package Lesson5;
+
+public class DoWhileN {
+    public static void main(String[] args) {
+        int n = 10;
+        do {
+            System.out.println("Reload " + n);
+            n--;
+        } while (n > 0);
+    }
+}
+=============================================================================
+//do while from 1 to 100
+package Lesson5;
+
+public class DoWhileFromTo {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= 100);
+    }
+}
 
 =============================================================================
+// switch day of the week
+package Lesson5;
+
+import java.util.Scanner;
+
+public class DaySwitch {
+    public static void main(String args[])
+    {
+        int i;
+        String day;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число от 1 до 7");
+        if (in.hasNextInt()) {
+            i = in.nextInt();
+            switch ( i ) {
+                case 1: day = "Понедельник" ;
+                    break;
+                case 2: day = "Вторник";
+                    break;
+                case 3: day = "Среда";
+                    break;
+                case 4: day = "Четверг";
+                    break;
+                case 5: day = "Пятница";
+                    break;
+                case 6:
+                case 7: day = "выходные";
+                    break;
+                default: day = "Ошибка! Вы ввели число не от 1 до 7."; }
+            System.out.println( "Day " + i +" " + day);
+        } else {
+            System.out.println("Ошибка! Вы ввели не верные данные.");}
+    }
+}
 
 =============================================================================
+//else if day of the week
+package Lesson5;
 
+import java.util.Scanner;
+
+public class DayElseIf {
+    public static void main(String[] args) {
+        int i;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число от 1 до 7");
+        if (in.hasNextInt()) {
+            i = in.nextInt();
+            if ( i == 1 ) {
+                System.out.println("Понедельник" );
+            } else if ( i == 2 ) {
+                System.out.println("Вторник");
+            } else if ( i == 3 ) {
+                System.out.println("Среда");
+            } else if (i == 4) {
+                System.out.println("Четверг");
+            } else if (i == 5) {
+                System.out.println("Пятница");
+            } else if (i == 6) {
+                System.out.println("Суббота");
+            } else if ( i == 7) {
+                System.out.println("Воскресение");
+            } else {
+                System.out.println("Ошибка! Вы ввели число не от 1 до 7.");}
+        } else {
+            System.out.println("Ошибка! Вы ввели не верные данные.");}
+    }
+}
 =============================================================================
+// сумма введёных чисел
+import java.util.Scanner;
 
+class AddNumbers
+{
+public static void main(String args[])
+{
+int x, y, z;
+Scanner in = new Scanner(System.in);
+if (in.hasNextInt()) {
+x = in.nextInt();
+y = in.nextInt();
+z = x + y;
+System.out.println("Сумма введеных чисел = " + z);
+} else {
+System.out.println("Ошибка! Вы ввели не верные данные.");}
+}
+}
 =============================================================================
+// чётное не чётное число
+import java.util.Scanner;
 
+class AddNumbers
+{
+public static void main(String args[])
+{
+int x;
+Scanner in = new Scanner(System.in);
+if (in.hasNextInt()) {
+x = in.nextInt();
+if ( x % 2 == 0 ) {
+System.out.println(x + " - четное число");
+} else {
+System.out.println(x + " - нечетное число"); }
+} else {
+System.out.println("Ошибка! Вы ввели не верные данные.");}
+}
+}
 =============================================================================
-
+//while повтор строк количество вводится и к строке добавляется №повторения
+public static void main(String[] args)
+{
+int i;
+Scanner in = new Scanner(System.in);
+System.out.println("Введите число");
+if (in.hasNextInt()) {
+i = in.nextInt();
+while ( i > 0) {
+System.out.println("Я тебя люблю " + i);
+i--;
+}
+} else { System.out.println("Не верные данные");
+}
+}
 =============================================================================
 
 =============================================================================
