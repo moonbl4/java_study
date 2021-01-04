@@ -1776,9 +1776,39 @@ public class Solution {
     byte d = (byte) (a + b - c);
 }
 =============================================================================
+//Метод fillArray(Integer[] array, int value) должен заполнять переданный в него массив значением value.
+import java.util.Arrays;
 
+public class Solution {
+    public static void main(String[] args) {
+        Integer[] array = new Integer[5];
+        fillArray(array, 3);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static void fillArray(Integer[] array, int value){
+        for (int i=0; i<array.length; i++)
+        array[i] = value;
+
+    }
+}
 =============================================================================
+//Требования:
+//1. Метод fillArray(Integer[] array, int value, int begin, int end) должен заполнять переданный в него массив значением value.
+//2. Метод fillArray(Integer[] array, int value, int begin, int end) должен заполнять только элементы от индекса begin(включительно) до индекса end (исключая).
+import java.util.Arrays;
 
+public class Solution {
+    public static void main(String[] args) {
+        Integer[] array = new Integer[5];
+        fillArray(array, 3, 1, 3);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static void fillArray(Integer[] array, int value, int begin, int end) {
+        Arrays.fill(array,  begin, end, value);
+    }
+}
 =============================================================================
 
 =============================================================================
