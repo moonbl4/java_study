@@ -1647,23 +1647,134 @@ i--;
 }
 }
 =============================================================================
+//все возможные типы
+public class Solution {
+    int a;
+    long b;
+    byte c;
+    short d;
+    boolean e;
+    double f;
+    float g;
+    char h;
 
 =============================================================================
+//максимальное значение типа
+public class Solution {
+    byte a = 127;
+    short b = 32767;
+    int c = 2147483647;
+    long d = 9223372036854775807L;
+    float e = Float.MAX_VALUE;
+    double f = Double.MAX_VALUE;
+    char g = 65535;
+    boolean h = true; 
+}
+=============================================================================
+//минимальное значение типа
+public class Solution {
+    byte a = Byte.MIN_VALUE;
+    short b = Short.MIN_VALUE;
+    int c = Integer.MIN_VALUE;
+    long d = Long.MIN_VALUE;
+    float e = Float.MIN_VALUE;
+    double f = Double.MIN_VALUE;
+    char g = Character.MIN_VALUE;
+    boolean h = false;
+}
+=============================================================================
+// п€ть известных величин - экспонентна€ форма записи
+public class Solution {
+    double earthDiameter = 1.2742E+4;
+    double lightSpeed = 2.99792458E+8;
+    double uraniumAtomicMass = 2.380289E+2;
+    double averageBeeWeight = 8.5E-2;
+    double javaDeveloperSalary = 1.0E+4;
+}
+=============================================================================
+//¬ методе main вызови метод div() 2 раза. ѕервый раз Ч с такими аргументами, чтобы вывод в консоли был "Infinity", а второй Ч "-Infinity".
+public class Solution {
+    public static void main(String[] args) {
+        double c = -100.0;
+        double e = 100.0;
+        div(0.0, e);
+        div(0.0, c);
+        //напишите тут ваш код
+    }
+
+    public static void div(double a, double b){
+        System.out.println(b/a);
+    }
+}
+=============================================================================
+//¬ методе main вызови метод div() с таким аргументам, чтобы вывод в консоли был "NaN".
+public class Solution {
+    public static void main(String[] args) {
+        double c = 0.0/0.0;
+       div(c, 3);//напишите тут ваш код
+    }
+
+    public static void div(double a, double b){
+        System.out.println(b/a);
+    }
+}
 
 =============================================================================
+//¬ методе main() измени пор€док вызова методов System.out.print() таким образом, чтобы вывод на консоль был: "Hello char".
+public class Solution {
+    public static char char1 = 101;
+    public static char char2 = 'H';
+    public static char char3 = 114;
+    public static char char4 = '\u006F';
+    public static char char5 = 108;
+    public static char char6 = 'h';
+    public static char char7 = 0x0063;
+    public static char char8 = ' ';
+    public static char char9 = 'l';
+    public static char char10 = 0x61;
 
+    public static void main(String[] args) {
+        System.out.print(char2);
+        System.out.print(char1);
+        System.out.print(char5);
+        System.out.print(char9);
+        System.out.print(char4);
+        System.out.print(char8);
+        System.out.print(char7);
+        System.out.print(char6);
+        System.out.print(char10);
+        System.out.print(char3);
+        System.out.println();
+    }
+}
+=============================================================================
+//–еализуй метод setValues(long value), чтобы он устанавливал полученное значение value переменным a, b, c и d.
+public class Solution {
+    public static byte a;
+    public static short b;
+    public static int c;
+    public static long d;
+
+    public static void main(String[] args) {
+        setValues(100);
+    }
+
+    public static void setValues(long value){
+
+         a = (byte) value;
+         b = (short) value;
+         c = (int) value;
+         d =  value;
+    }
+}
 =============================================================================
 
-=============================================================================
-
-=============================================================================
-
-=============================================================================
-
-=============================================================================
-
-=============================================================================
-
+public class Solution {
+    long a = 109 + 15;
+    int b = (int) a * 2;
+    short c = (short) (a / b);
+    byte d = (byte) (a + b - c);
+}
 =============================================================================
 
 =============================================================================
