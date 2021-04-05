@@ -2263,15 +2263,134 @@ logical OR	||
 ternary	? :
 assignment	= += -= *= /= %= &= ^= |= <<= >>= >>>=
 =============================================================================
+Заполнение массива символами
 
+0 - '\u00A9'
+1 - '\u004A'
+2 - '\u0061'
+3 - '\u0076'
+4 - '\u0061'
+5 - '\u0052'
+6 - '\u0075'
+7 - '\u0073'
+8 - '\u0068'
+
+public class Solution {
+    public static void main(String[] args) {
+        char[] symbols = new char[9];
+        init(symbols);
+        System.out.println(new String(symbols));
+    }
+
+    public static void init(char[] symbols) {
+        symbols[0] = '\u00A9';
+        symbols[1] = '\u004A';
+        symbols[2] = '\u0061';
+        symbols[3] = '\u0076';
+        symbols[4] = '\u0061';
+        symbols[5] = '\u0052';
+        symbols[6] = '\u0075';
+        symbols[7] = '\u0073';
+        symbols[8] = '\u0068';
+    }
+}
+
+©JavaRush
 =============================================================================
+Инициализация статических переменных следующими значениями:
 
+partyFace — "\uD83E\uDD73"
+balloon — "\uD83C\uDF88"
+gift — "\uD83C\uDF81"
+partyPopper — "\uD83C\uDF89"
+cake — "\uD83C\uDF82"
+
+public class Solution {
+    public static String partyFace = "\uD83E\uDD73";
+    public static String balloon = "\uD83C\uDF88";
+    public static String gift = "\uD83C\uDF81";
+    public static String partyPopper = "\uD83C\uDF89";
+    public static String cake = "\uD83C\uDF82";
+
+    public static void main(String[] args) {
+        printCongratulation();
+    }
+
+    public static void printCongratulation() {
+        String happyBirthday = "С днем рождения!";
+        String congratulation = partyFace + balloon + partyPopper + cake + gift;
+        System.out.println(happyBirthday + congratulation);
+    }
+}
+
+С днем рождения!??????????
 =============================================================================
+1. Вывод на экран индекс первого символа первого слова (второй параметр метода) в строке (первый параметр метода).
+2. Вывод на экран индекс первого символа последнего слова (второй параметр метода) в строке (первый параметр метода).
 
+public class Solution {
+    public static void main(String[] args) {
+        String string = "Чтобы стать программистом, нужно писать код. Чтобы писать код, нужно учиться. Чтобы учиться, нужно желание.";
+        String word = "код";
+        int indexFromFirstWord = getIndexFromFirstWord(string, word);
+        int indexFromLastWord = getIndexFromLastWord(string, word);
+        System.out.println("Индекс первого символа первого слова \"" + word + "\" равен - " + indexFromFirstWord);
+        System.out.println("Индекс первого символа последнего слова \"" + word + "\" равен - " + indexFromLastWord);
+    }
+
+    public static int getIndexFromFirstWord(String string, String word) {
+        return string.indexOf(word);
+    }
+
+    public static int getIndexFromLastWord(String string, String word) {
+        return string.lastIndexOf(word);
+    }
+}
+
+Индекс первого символа первого слова "код" равен - 40
+Индекс первого символа последнего слова "код" равен - 58
 =============================================================================
+Заменяет часть ссылки на нужную часть и выводит её
 
+public class Solution {
+    public static void main(String[] args) {
+        String path = "/usr/java/jdk1.8/bin";
+
+        String jdk13 = "jdk-13";
+        System.out.println(changePath(path, jdk13));
+    }
+
+    public static String changePath(String path, String jdk) {
+        int firstIndex = path.indexOf("jdk");
+        int lastIndex = path.indexOf("/", firstIndex);
+        String oldJdk = path.substring(firstIndex, lastIndex);
+
+        return path.replace(oldJdk, jdk);
+    }
+}
+
+/usr/java/jdk-13/bin
 =============================================================================
+Замена домена ru на com 
 
+public class Solution {
+    public static void main(String[] args) {
+        String path = "https://javarush.ru/tasks?status=ASSIGNED";
+
+        String domen = ".com";
+        System.out.println(changePath(path, domen));
+    }
+
+    public static String changePath(String path, String domen) {
+        int firstIndex = path.indexOf(".ru");
+        int lastIndex = path.indexOf("/", firstIndex);
+        String oldJdk = path.substring(firstIndex, lastIndex);
+
+        return path.replace(oldJdk, domen);
+    }
+}
+
+https://javarush.com/tasks?status=ASSIGNED
 =============================================================================
 
 =============================================================================
